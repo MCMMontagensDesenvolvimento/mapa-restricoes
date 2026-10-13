@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.pnpm/
+.npm/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Runtime
+.artifact-runtime/
+.artifacts-runtime/
+
+# Environment
+.env*
+!.env.example
+
+# Builds
+.next/
+dist/
+out/

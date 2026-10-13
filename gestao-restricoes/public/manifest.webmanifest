@@ -1,0 +1,11 @@
+{
+  "name":"Lean Control",
+  "short_name":"Lean Control",
+  "description":"Gestão corporativa de restrições Lean Construction",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#f4f6f5",
+  "theme_color":"#142b26",
+  "icons":[{"src":"/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
+

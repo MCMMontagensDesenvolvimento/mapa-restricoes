@@ -1,0 +1,6 @@
+{
+  "url": "https://leancontrol.empresa.com.br",
+  "healthUrl": "https://leancontrol.empresa.com.br/api/health",
+  "timeoutSeconds": 10
+}
+

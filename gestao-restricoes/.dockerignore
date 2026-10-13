@@ -1,0 +1,10 @@
+node_modules
+.next
+.vinext
+.wrangler
+dist
+.env
+*.db
+backups
+.sites-bootstrap
+

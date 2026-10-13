@@ -1,0 +1,27 @@
+{
+  "projectName": "NEXA-MT",
+  "applicationName": "Lean Control",
+  "excelLocation": "",
+  "backupFolder": "backups",
+  "syncFrequencyMinutes": 60,
+  "criticality": {
+    "overdue": 40,
+    "dueToday": 35,
+    "dueTwoDays": 30,
+    "priorityHigh": 30,
+    "priorityMedium": 15,
+    "agingOver20": 20,
+    "agingOver10": 15,
+    "highThreshold": 50,
+    "criticalThreshold": 70
+  },
+  "masters": {
+    "responsibles": [],
+    "companies": [],
+    "disciplines": [],
+    "areas": [],
+    "categories": [],
+    "statuses": [],
+    "priorities": []
+  }
+}

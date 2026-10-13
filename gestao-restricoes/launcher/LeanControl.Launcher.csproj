@@ -1,0 +1,2 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net8.0-windows</TargetFramework><UseWindowsForms>true</UseWindowsForms><AssemblyName>Lean Control</AssemblyName><PublishSingleFile>true</PublishSingleFile><SelfContained>false</SelfContained><RuntimeIdentifier>win-x64</RuntimeIdentifier></PropertyGroup><ItemGroup><None Include="LeanControl.Launcher.json" CopyToOutputDirectory="PreserveNewest" /></ItemGroup></Project>
+

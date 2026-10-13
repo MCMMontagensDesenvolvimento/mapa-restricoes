@@ -1,0 +1,37 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL}
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
+        NEXT_PUBLIC_ENTRA_TENANT_ID: ${NEXT_PUBLIC_ENTRA_TENANT_ID}
+        NEXT_PUBLIC_ENTRA_CLIENT_ID: ${NEXT_PUBLIC_ENTRA_CLIENT_ID}
+        NEXT_PUBLIC_ENTRA_API_SCOPE: ${NEXT_PUBLIC_ENTRA_API_SCOPE}
+    restart: unless-stopped
+    ports: ["3000:3000"]
+    depends_on: [api]
+  api:
+    build: ./backend
+    restart: unless-stopped
+    env_file: .env
+    ports: ["8000:8000"]
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: leancontrol
+      POSTGRES_USER: leancontrol
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes: ["postgres_data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL","pg_isready -U leancontrol -d leancontrol"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+volumes:
+  postgres_data:
+
